@@ -48,89 +48,12 @@ KiroSwitch Manager 是一款跨平台桌面应用，用于管理 Kiro IDE 的多
 | 构建 | Wails CLI, npm |
 | CI/CD | GitHub Actions |
 
-## 项目结构
-
-```
-├── main.go                  # 应用入口，Wails 配置
-├── app.go                   # App 结构体，暴露给前端的方法
-├── wails.json               # Wails 项目配置
-├── backend/
-│   ├── config/              # 应用配置常量（版本号、加密密钥、IDC 配置）
-│   ├── models/              # 数据模型（Account、KiroProxy、Response）
-│   ├── services/
-│   │   ├── account_service.go        # 账号增删改查、Token 刷新
-│   │   ├── token_service.go          # Social Token 刷新
-│   │   ├── builderid_token_service.go # Builder ID Token 刷新
-│   │   ├── idc_token_service.go      # IDC Token 刷新
-│   │   ├── social_auth_service.go    # Google/GitHub OAuth 登录
-│   │   ├── builderid_auth_service.go # Builder ID 设备授权登录
-│   │   ├── idc_import_service.go     # Enterprise IDC 设备授权导入
-│   │   ├── proxy_server_service.go   # API 代理服务器主逻辑
-│   │   ├── proxy_client_service.go   # Kiro API 客户端（AWS Event Stream 解析）
-│   │   ├── proxy_auth_service.go     # 代理凭据管理
-│   │   ├── proxy_convert_service.go  # Claude/OpenAI → Kiro 请求格式转换
-│   │   ├── proxy_account_pool.go     # 多账号连接池与负载均衡
-│   │   ├── proxy_rate_limiter.go     # Token 桶限流器
-│   │   ├── proxy_error_handler.go    # 错误分类与熔断器
-│   │   ├── softreset_service.go      # 软重置（Machine ID 注入）
-│   │   ├── hardreset_service_*.go    # 硬重置（按平台实现）
-│   │   ├── model_lock_service.go     # 模型锁定与文件监控
-│   │   ├── settings_service.go       # Kiro 安装路径检测
-│   │   ├── process_service.go        # Kiro 进程管理
-│   │   └── update_service.go         # GitHub 更新检查
-│   └── utils/               # 工具函数（HTTP 客户端、加密、日志、设备信息）
-├── frontend/
-│   ├── src/
-│   │   ├── App.vue           # 主界面（账号列表、设置、代理控制）
-│   │   └── components/       # Vue 组件（AccountList、Toast）
-│   └── wailsjs/              # Wails 自动生成的 Go 绑定
-└── .github/workflows/        # CI/CD（多平台构建 + Release 发布）
-```
-
 ## 环境要求
 
-- Go 1.23+
-- Node.js 20+
-- Wails CLI v2（`go install github.com/wailsapp/wails/v2/cmd/wails@latest`）
 - 平台依赖：
   - Windows：无额外依赖
   - macOS：Xcode Command Line Tools
   - Linux：`libgtk-3-dev` `libwebkit2gtk-4.1-dev`
-
-## 快速开始
-
-### 安装依赖
-
-```bash
-# 安装 Wails CLI
-go install github.com/wailsapp/wails/v2/cmd/wails@latest
-
-# 安装前端依赖
-cd frontend && npm install && cd ..
-```
-
-### 开发模式
-
-```bash
-wails dev
-```
-
-启动后会自动打开应用窗口，前端热更新地址为 `http://localhost:5173`。
-
-### 构建发布版
-
-```bash
-# Windows
-wails build -clean -platform windows/amd64 -ldflags "-w -s -H windowsgui"
-
-# macOS (Universal)
-wails build -clean -platform darwin/universal -ldflags "-w -s"
-
-# Linux
-wails build -clean -platform linux/amd64 -ldflags "-w -s"
-```
-
-构建产物位于 `build/bin/` 目录。
 
 ## 代理服务器使用
 
