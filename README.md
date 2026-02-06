@@ -178,4 +178,4 @@ git push origin v2.0.0
 
 ## 许可证
 
-Copyright © 2026 pahhcn
+Copyright © 2026 kiroswitch
