@@ -1,63 +1,108 @@
-# KiroSwitch Manager
+<div align="center">
 
-KiroSwitch Manager 是一款跨平台桌面应用，用于管理 Kiro IDE 的多账号切换，并提供兼容 Claude/OpenAI API 格式的本地代理服务器。
+# ⚡ KiroSwitch Manager
 
-基于 [Wails](https://wails.io/)（Go + Vue 3）构建，支持 Windows、macOS 和 Linux。
+### Kiro IDE 多账号管理 & API 代理工具
 
-## 功能特性
+[![Release](https://img.shields.io/github/v/release/zeoak9297/KiroSwitchManager?style=for-the-badge&color=blue&label=最新版本)](https://github.com/zeoak9297/KiroSwitchManager/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/zeoak9297/KiroSwitchManager/total?style=for-the-badge&color=green&label=总下载量)](https://github.com/zeoak9297/KiroSwitchManager/releases)
+[![Platform](https://img.shields.io/badge/平台-Windows%20|%20macOS%20|%20Linux-blueviolet?style=for-the-badge)](https://github.com/zeoak9297/KiroSwitchManager/releases/latest)
+[![Go](https://img.shields.io/badge/Go-1.24-00ADD8?style=for-the-badge&logo=go&logoColor=white)](https://go.dev/)
+[![Vue](https://img.shields.io/badge/Vue-3-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white)](https://vuejs.org/)
 
-### 多账号管理
-- 支持三种认证方式：Social（Google/GitHub）、AWS Builder ID、Enterprise IDC
-- 一键切换当前 Kiro 使用的账号
+<br/>
+
+<img src="https://img.shields.io/badge/Wails-v2-red?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyTDIgN2wxMCA1IDEwLTV6TTIgMTdsMTAgNSAxMC01TTIgMTJsMTAgNSAxMC01Ii8+PC9zdmc+"/>
+
+**一站式管理你的 Kiro IDE 账号，内置 Claude/OpenAI 兼容代理服务器**
+
+[📦 立即下载](#-安装) · [✨ 功能特性](#-功能特性) · [🚀 快速开始](#-快速开始) · [📖 使用指南](#-使用指南)
+
+</div>
+
+---
+
+## ✨ 功能特性
+
+<table>
+<tr>
+<td width="50%">
+
+### 🔄 多账号管理
+- 支持 **Social**（Google/GitHub）、**AWS Builder ID**、**Enterprise IDC** 三种认证
+- 一键切换 Kiro 当前使用的账号
 - 自动刷新 Token，可配置刷新间隔
-- 实时显示账号使用额度（已用/总量）
+- 实时显示账号使用额度
 - 自动检测账号封禁状态
 
-### 本地 API 代理服务器
-- 兼容 Claude API 和 OpenAI API 格式，可直接对接第三方工具
-- 多账号负载均衡，自动轮询可用账号
-- Token 桶限流（全局 + 单账号粒度）
-- 熔断器模式（Circuit Breaker），自动隔离故障账号
-- 支持流式（Streaming）和非流式响应
-- API Key 认证保护
-- 实时请求统计（成功/失败/Token 用量）
+</td>
+<td width="50%">
 
-### 机器码重置
-- 软重置：通过修改 Kiro 扩展注入自定义 Machine ID，无需管理员权限
-- 硬重置：修改系统注册表/配置文件（Windows 需管理员权限）
-- 自动管理 Kiro 进程（重置前关闭，重置后重启）
+### 🌐 API 代理服务器
+- 兼容 **Claude API** 和 **OpenAI API** 格式
+- 多账号负载均衡，自动轮询
+- Token 桶限流（全局 + 单账号）
+- 熔断器模式，自动隔离故障账号
+- 支持流式 & 非流式响应
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 🔑 机器码重置
+- **软重置**：注入自定义 Machine ID，无需管理员权限
+- **硬重置**：修改系统注册表/配置（Windows 需管理员）
+- 自动管理 Kiro 进程生命周期
 - 支持备份和恢复原始 Machine ID
 
-### 模型锁定
-- 锁定 Kiro 使用的 AI 模型（Sonnet 4.5 / Sonnet 4 / Haiku 4.5 / Opus 4.5）
-- 通过文件监控（fsnotify）实时检测设置变更，自动恢复锁定模型
+</td>
+<td width="50%">
 
-### 其他
-- 6 套主题：深色、浅色、海洋蓝、梦幻紫、清新绿、玫瑰粉
-- 自动检查更新（GitHub Releases）
-- 无边框窗口，支持拖拽
-- 调试日志开关
+### 🎨 更多特性
+- **模型锁定**：锁定 Sonnet / Opus / Haiku 模型
+- **6 套主题**：深色、浅色、海洋蓝、梦幻紫、清新绿、玫瑰粉
+- **自动更新检查**
+- **无边框窗口**，支持拖拽
 
-## 技术栈
+</td>
+</tr>
+</table>
 
-| 层级 | 技术 |
-|------|------|
-| 桌面框架 | Wails v2 |
-| 后端 | Go 1.24 |
-| 前端 | Vue 3 + Vite |
-| 构建 | Wails CLI, npm |
-| CI/CD | GitHub Actions |
+---
 
-## 环境要求
+## 📦 安装
 
-- 平台依赖：
-  - Windows：无额外依赖
-  - macOS：Xcode Command Line Tools
-  - Linux：`libgtk-3-dev` `libwebkit2gtk-4.1-dev`
+前往 [Releases](https://github.com/zeoak9297/KiroSwitchManager/releases/latest) 下载对应平台的安装包：
 
-## 代理服务器使用
+| 平台 | 文件 | 架构 |
+|:---:|:---:|:---:|
+| 🪟 Windows | `kiroswitch-manager-windows-amd64-*.zip` | x64 |
+| 🍎 macOS | `kiroswitch-manager-macos-universal-*.tar.gz` | Universal (Intel + Apple Silicon) |
+| 🐧 Linux | `kiroswitch-manager-linux-amd64-*.tar.gz` | x64 |
 
-启动代理后，可通过以下方式调用：
+> **Windows 用户**：解压后直接运行 `.exe` 文件即可
+>
+> **macOS 用户**：解压后将 `.app` 拖入 Applications 文件夹，首次运行如遇安全提示，前往 系统设置 → 隐私与安全性 → 允许运行
+>
+> **Linux 用户**：解压后赋予执行权限 `chmod +x kiroswitch-manager-*` 后运行
+
+---
+
+## 🚀 快速开始
+
+1. 下载并启动 KiroSwitch Manager
+2. 点击 **导入账号**，选择认证方式（推荐 Social 登录）
+3. 完成授权后，账号自动出现在列表中
+4. 点击账号即可一键切换
+
+---
+
+## 📖 使用指南
+
+### 代理服务器
+
+启动代理后，可直接对接支持 Claude/OpenAI API 的第三方工具：
 
 ```bash
 # Claude API 格式
@@ -69,7 +114,9 @@ curl http://localhost:8080/v1/messages \
     "max_tokens": 1024,
     "messages": [{"role": "user", "content": "Hello"}]
   }'
+```
 
+```bash
 # OpenAI API 格式
 curl http://localhost:8080/v1/chat/completions \
   -H "Authorization: Bearer YOUR_API_KEY" \
@@ -80,25 +127,70 @@ curl http://localhost:8080/v1/chat/completions \
   }'
 ```
 
-API Key 在代理设置面板中查看，首次启动时自动生成。
+> API Key 在代理设置面板中查看，首次启动时自动生成。
 
-## 数据存储
+### 模型锁定
 
-| 文件 | 路径 | 说明 |
-|------|------|------|
-| 账号数据 | `~/.kiroswitch-manager/accounts.json` | 所有已导入的账号信息 |
-| 代理配置 | `~/.kiroswitch-manager/proxy_config.json` | 代理端口、API Key、限流配置 |
-| Kiro 凭据 | `~/.aws/sso/cache/kiro-auth-token.json` | 当前 Kiro 使用的认证凭据 |
+支持锁定以下模型，防止 Kiro 自动切换：
 
-## 发布流程
+| 模型 | 倍率 |
+|:---:|:---:|
+| Claude Sonnet 4.5 | 1.3x |
+| Claude Sonnet 4 | 1.3x |
+| Claude Haiku 4.5 | 0.4x |
+| Claude Opus 4.5 | 2.2x |
 
-推送 `v*.*.*` 格式的 Git Tag 即可触发 GitHub Actions 自动构建，生成三个平台的安装包并发布到 GitHub Releases。
+---
 
-```bash
-git tag v2.0.0
-git push origin v2.0.0
-```
+## 🛠️ 技术栈
 
-## 许可证
+<div align="center">
 
-Copyright © 2026 kiroswitch
+| | 技术 | 版本 |
+|:---:|:---:|:---:|
+| 🖥️ | **Wails** | v2 |
+| ⚙️ | **Go** | 1.24 |
+| 🎨 | **Vue** | 3 |
+| ⚡ | **Vite** | 3 |
+
+</div>
+
+---
+
+## ❓ 常见问题
+
+<details>
+<summary><b>macOS 提示"无法验证开发者"怎么办？</b></summary>
+<br/>
+前往 系统设置 → 隐私与安全性 → 找到 KiroSwitch Manager → 点击"仍要打开"
+</details>
+
+<details>
+<summary><b>代理服务器连接不上？</b></summary>
+<br/>
+检查防火墙是否放行了代理端口（默认 8080），确认 API Key 是否正确填写。
+</details>
+
+<details>
+<summary><b>账号显示"已封禁"？</b></summary>
+<br/>
+该账号的凭证已失效或被限制，可尝试删除后重新导入，或使用机器码重置功能。
+</details>
+
+---
+
+## 📄 许可证
+
+Copyright © 2026 pahhcn. All rights reserved.
+
+本软件仅供个人学习和研究使用。
+
+---
+
+<div align="center">
+
+**如果觉得有用，请给个 ⭐ Star 支持一下！**
+
+[![Star History Chart](https://api.star-history.com/svg?repos=zeoak9297/KiroSwitchManager&type=Date)](https://star-history.com/#zeoak9297/KiroSwitchManager&Date)
+
+</div>
