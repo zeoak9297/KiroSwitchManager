@@ -7,16 +7,13 @@
 [![Release](https://img.shields.io/github/v/release/zeoak9297/KiroSwitchManager?style=for-the-badge&color=blue&label=最新版本)](https://github.com/zeoak9297/KiroSwitchManager/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/zeoak9297/KiroSwitchManager/total?style=for-the-badge&color=green&label=总下载量)](https://github.com/zeoak9297/KiroSwitchManager/releases)
 [![Platform](https://img.shields.io/badge/平台-Windows%20|%20macOS%20|%20Linux-blueviolet?style=for-the-badge)](https://github.com/zeoak9297/KiroSwitchManager/releases/latest)
-[![Go](https://img.shields.io/badge/Go-1.24-00ADD8?style=for-the-badge&logo=go&logoColor=white)](https://go.dev/)
-[![Vue](https://img.shields.io/badge/Vue-3-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white)](https://vuejs.org/)
+[![QQ群](https://img.shields.io/badge/QQ群-1065224964-12B7F5?style=for-the-badge&logo=tencentqq&logoColor=white)](https://qun.qq.com/universal-share/share?ac=1&authKey=BomWk%2FawrYRpcRpyd0sPsAMx2UPhtHkb2ZobUBo6Yp9ozXKEPYtr3UMemrnePc3h&busi_data=eyJncm91cENvZGUiOiIxMDY1MjI0OTY0IiwidG9rZW4iOiJqME9xSk5wL1p2VzlRczg2MkR2K2JXVTlUdjZVTTB1UmxsQ3YyV3doT3RoNE1ua2xoSXJpWTQrUFBzSGc4TDRrIiwidWluIjoiMTg4NDQzNTQ4In0%3D&data=iG0O34ARO65vmvL_QL4gE7dYh72gUWhYsj5IbgmYX2b7owfmbGtjjVYHblk19DdULt617EydUiGtYF8OeztVew&svctype=4&tempid=h5_group_info)
 
 <br/>
 
-<img src="https://img.shields.io/badge/Wails-v2-red?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyTDIgN2wxMCA1IDEwLTV6TTIgMTdsMTAgNSAxMC01TTIgMTJsMTAgNSAxMC01Ii8+PC9zdmc+"/>
-
 **一站式管理你的 Kiro IDE 账号，内置 Claude/OpenAI 兼容代理服务器**
 
-[📦 立即下载](#-安装) · [✨ 功能特性](#-功能特性) · [🚀 快速开始](#-快速开始) · [📖 使用指南](#-使用指南)
+🌐 [官网](https://kiroswitch.top/) · 📦 [下载](https://github.com/zeoak9297/KiroSwitchManager/releases/latest) · 💬 [QQ 交流群：1065224964](https://qun.qq.com/universal-share/share?ac=1&authKey=BomWk%2FawrYRpcRpyd0sPsAMx2UPhtHkb2ZobUBo6Yp9ozXKEPYtr3UMemrnePc3h&busi_data=eyJncm91cENvZGUiOiIxMDY1MjI0OTY0IiwidG9rZW4iOiJqME9xSk5wL1p2VzlRczg2MkR2K2JXVTlUdjZVTTB1UmxsQ3YyV3doT3RoNE1ua2xoSXJpWTQrUFBzSGc4TDRrIiwidWluIjoiMTg4NDQzNTQ4In0%3D&data=iG0O34ARO65vmvL_QL4gE7dYh72gUWhYsj5IbgmYX2b7owfmbGtjjVYHblk19DdULt617EydUiGtYF8OeztVew&svctype=4&tempid=h5_group_info)
 
 </div>
 
@@ -30,7 +27,7 @@
 
 ### 🔄 多账号管理
 - 支持 **Social**（Google/GitHub）、**AWS Builder ID**、**Enterprise IDC** 三种认证
-- 一键切换 Kiro 当前使用的账号
+- 一键切换账号，自动处理机器码绑定
 - 自动刷新 Token，可配置刷新间隔
 - 实时显示账号使用额度
 - 自动检测账号封禁状态
@@ -50,11 +47,12 @@
 <tr>
 <td width="50%">
 
-### 🔑 机器码重置
+### 🔑 机器码管理
+- **一账号一机器码**：切换时自动恢复绑定的机器码，避免频繁变动导致封号
 - **软重置**：注入自定义 Machine ID，无需管理员权限
-- **硬重置**：修改系统注册表/配置（Windows 需管理员）
+- **硬重置**：修改系统注册表（Windows 需管理员）
+- **机器码备份**：手动备份/恢复当前机器码（注册表 + storage.json + custom-machine-id）
 - 自动管理 Kiro 进程生命周期
-- 支持备份和恢复原始 Machine ID
 
 </td>
 <td width="50%">
@@ -63,6 +61,7 @@
 - **模型锁定**：锁定 Sonnet / Opus / Haiku 模型
 - **6 套主题**：深色、浅色、海洋蓝、梦幻紫、清新绿、玫瑰粉
 - **自动更新检查**
+- **开机自启动**
 - **无边框窗口**，支持拖拽
 
 </td>
@@ -75,17 +74,17 @@
 
 前往 [Releases](https://github.com/zeoak9297/KiroSwitchManager/releases/latest) 下载对应平台的安装包：
 
-| 平台 | 文件 | 架构 |
-|:---:|:---:|:---:|
-| 🪟 Windows | `kiroswitch-manager-windows-amd64-*.zip` | x64 |
-| 🍎 macOS | `kiroswitch-manager-macos-universal-*.tar.gz` | Universal (Intel + Apple Silicon) |
-| 🐧 Linux | `kiroswitch-manager-linux-amd64-*.tar.gz` | x64 |
+| 平台 | 文件 |
+|:---:|:---:|
+| 🪟 Windows x64 | `kiroswitch-manager-windows-amd64-v*.exe` |
+| 🍎 macOS Universal | `kiroswitch-manager-macos-universal-v*.zip` |
+| 🐧 Linux x64 | `kiroswitch-manager-linux-amd64-v*` |
 
-> **Windows 用户**：解压后直接运行 `.exe` 文件即可
+> **Windows 用户**：下载 `.exe` 后直接双击运行，建议以管理员身份运行以获得完整的机器码重置能力
 >
-> **macOS 用户**：解压后将 `.app` 拖入 Applications 文件夹，首次运行如遇安全提示，前往 系统设置 → 隐私与安全性 → 允许运行
+> **macOS 用户**：解压 `.zip` 后将 `.app` 拖入 Applications 文件夹，首次运行如遇安全提示，前往 系统设置 → 隐私与安全性 → 允许运行
 >
-> **Linux 用户**：解压后赋予执行权限 `chmod +x kiroswitch-manager-*` 后运行
+> **Linux 用户**：下载后赋予执行权限 `chmod +x kiroswitch-manager-linux-amd64-*` 后运行
 
 ---
 
@@ -94,11 +93,31 @@
 1. 下载并启动 KiroSwitch Manager
 2. 点击 **导入账号**，选择认证方式（推荐 Social 登录）
 3. 完成授权后，账号自动出现在列表中
-4. 点击账号即可一键切换
+4. 点击账号即可一键切换（自动处理机器码绑定 + 切换凭证 + 启动 Kiro）
 
 ---
 
 ## 📖 使用指南
+
+### 机器码绑定（一账号一机器码）
+
+切换账号时，系统会自动处理机器码：
+
+- **首次切换**：自动生成新机器码并绑定到该账号
+- **再次切换**：自动恢复该账号绑定的机器码，不再重复生成
+
+这样每个账号始终使用同一个机器码，避免频繁变动被检测。绑定数据保存在本地配置文件中。
+
+在账号详情中可以查看绑定状态，也可以手动绑定/解绑。
+
+### 机器码备份
+
+在 **设置 → 机器码备份 → 管理备份** 中，可以手动备份当前机器码：
+
+- **备份内容**：注册表 MachineGuid（Windows）+ storage.json 遥测 ID + custom-machine-id
+- **恢复**：一键恢复到指定备份的机器码状态
+- **删除**：清理不需要的备份记录
+- **跨平台**：Windows 备份含注册表，macOS/Linux 备份软重置相关文件
 
 ### 代理服务器
 
@@ -135,25 +154,11 @@ curl http://localhost:8080/v1/chat/completions \
 
 | 模型 | 倍率 |
 |:---:|:---:|
+| Claude Opus 4.6 | 2.2x |
+| Claude Opus 4.5 | 2.2x |
 | Claude Sonnet 4.5 | 1.3x |
 | Claude Sonnet 4 | 1.3x |
 | Claude Haiku 4.5 | 0.4x |
-| Claude Opus 4.5 | 2.2x |
-
----
-
-## 🛠️ 技术栈
-
-<div align="center">
-
-| | 技术 | 版本 |
-|:---:|:---:|:---:|
-| 🖥️ | **Wails** | v2 |
-| ⚙️ | **Go** | 1.24 |
-| 🎨 | **Vue** | 3 |
-| ⚡ | **Vite** | 3 |
-
-</div>
 
 ---
 
@@ -177,11 +182,33 @@ curl http://localhost:8080/v1/chat/completions \
 该账号的凭证已失效或被限制，可尝试删除后重新导入，或使用机器码重置功能。
 </details>
 
+<details>
+<summary><b>切换账号后 Kiro 启动失败？</b></summary>
+<br/>
+确认 Kiro 已正确安装，Windows 用户建议以管理员身份运行以获得完整的机器码重置能力。
+</details>
+
+---
+
+## 📝 源码说明
+
+本仓库仅发布编译好的安装包，不提供源码。前往 [Releases](https://github.com/zeoak9297/KiroSwitchManager/releases/latest) 下载。
+
+**⚠️ 本项目永久免费！如果有人向你收费，你被骗了！**
+
+---
+
+## 💬 交流反馈
+
+- 🌐 **官网**：[kiroswitch.top](https://kiroswitch.top/)
+- 💬 **QQ 交流群**：[1065224964](https://qun.qq.com/universal-share/share?ac=1&authKey=BomWk%2FawrYRpcRpyd0sPsAMx2UPhtHkb2ZobUBo6Yp9ozXKEPYtr3UMemrnePc3h&busi_data=eyJncm91cENvZGUiOiIxMDY1MjI0OTY0IiwidG9rZW4iOiJqME9xSk5wL1p2VzlRczg2MkR2K2JXVTlUdjZVTTB1UmxsQ3YyV3doT3RoNE1ua2xoSXJpWTQrUFBzSGc4TDRrIiwidWluIjoiMTg4NDQzNTQ4In0%3D&data=iG0O34ARO65vmvL_QL4gE7dYh72gUWhYsj5IbgmYX2b7owfmbGtjjVYHblk19DdULt617EydUiGtYF8OeztVew&svctype=4&tempid=h5_group_info)
+- 🐛 **问题反馈**：[GitHub Issues](https://github.com/zeoak9297/KiroSwitchManager/issues)
+
 ---
 
 ## 📄 许可证
 
-Copyright © 2026 pahhcn. All rights reserved.
+Copyright © 2025-2026 KiroSwitch. All rights reserved.
 
 本软件仅供个人学习和研究使用。
 
