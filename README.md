@@ -7,7 +7,7 @@
 [![Release](https://img.shields.io/github/v/release/zeoak9297/KiroSwitchManager?style=for-the-badge&color=blue&label=最新版本)](https://github.com/zeoak9297/KiroSwitchManager/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/zeoak9297/KiroSwitchManager/total?style=for-the-badge&color=green&label=总下载量)](https://github.com/zeoak9297/KiroSwitchManager/releases)
 [![Platform](https://img.shields.io/badge/平台-Windows%20|%20macOS%20|%20Linux-blueviolet?style=for-the-badge)](https://github.com/zeoak9297/KiroSwitchManager/releases/latest)
-[![QQ群](https://img.shields.io/badge/QQ群-1065224964-12B7F5?style=for-the-badge&logo=tencentqq&logoColor=white)](https://qun.qq.com/universal-share/share?ac=1&authKey=BomWk%2FawrYRpcRpyd0sPsAMx2UPhtHkb2ZobUBo6Yp9ozXKEPYtr3UMemrnePc3h&busi_data=eyJncm91cENvZGUiOiIxMDY1MjI0OTY0IiwidG9rZW4iOiJqME9xSk5wL1p2VzlRczg2MkR2K2JXVTlUdjZVTTB1UmxsQ3YyV3doT3RoNE1ua2xoSXJpWTQrUFBzSGc4TDRrIiwidWluIjoiMTg4NDQzNTQ4In0%3D&data=iG0O34ARO65vmvL_QL4gE7dYh72gUWhYsj5IbgmYX2b7owfmbGtjjVYHblk19DdULt617EydUiGtYF8OeztVew&svctype=4&tempid=h5_group_info)
+[![QQ群](https://img.shields.io/badge/QQ群-1065224964-12B7F5?style=for-the-badge)](https://qun.qq.com/universal-share/share?ac=1&authKey=BomWk%2FawrYRpcRpyd0sPsAMx2UPhtHkb2ZobUBo6Yp9ozXKEPYtr3UMemrnePc3h&busi_data=eyJncm91cENvZGUiOiIxMDY1MjI0OTY0IiwidG9rZW4iOiJqME9xSk5wL1p2VzlRczg2MkR2K2JXVTlUdjZVTTB1UmxsQ3YyV3doT3RoNE1ua2xoSXJpWTQrUFBzSGc4TDRrIiwidWluIjoiMTg4NDQzNTQ4In0%3D&data=iG0O34ARO65vmvL_QL4gE7dYh72gUWhYsj5IbgmYX2b7owfmbGtjjVYHblk19DdULt617EydUiGtYF8OeztVew&svctype=4&tempid=h5_group_info)
 
 <br/>
 
@@ -59,20 +59,22 @@
 
 ### 🎨 更多特性
 - **模型锁定**：锁定 Sonnet / Opus / Haiku 模型
+- **Kiro 路径自动检测**：支持手动指定或自动检测安装路径
 - **6 套主题**：深色、浅色、海洋蓝、梦幻紫、清新绿、玫瑰粉
 - **自动更新检查**
 - **开机自启动**
+- **账号数据导出**
 - **无边框窗口**，支持拖拽
 
 </td>
 </tr>
-</table>
+</te>
 
 ---
 
 ## 📦 安装
 
-前往 [Releases](https://github.com/zeoak9297/KiroSwitchManager/releases/latest) 下载对应平台的安装包：
+前往 [Releases](https://github.com/zeoak9297/KiroSwitchManager/releases/latest) 下载对应平台的安装包。
 
 | 平台 | 文件 |
 |:---:|:---:|
@@ -97,6 +99,18 @@
 
 ---
 
+## �️ 界面预览
+
+| 首页 | 账号管理 |
+|:---:|:---:|
+| ![首页](src/home.jpg) | ![账号管理](src/account.jpg) |
+
+| 代理服务器 | 设置 |
+|:---:|:---:|
+| ![代理服务器](src/proxy.jpg) | ![设置](src/seting.jpg) |
+
+---
+
 ## 📖 使用指南
 
 ### 机器码绑定（一账号一机器码）
@@ -114,14 +128,14 @@
 
 在 **设置 → 机器码备份 → 管理备份** 中，可以手动备份当前机器码：
 
-- **备份内容**：注册表 MachineGuid（Windows）+ storage.json 遥测 ID + custom-machine-id
+- **备份内容**：注册表 MachineGuid（Windows）、storage.json 遥测 ID + custom-machine-id
 - **恢复**：一键恢复到指定备份的机器码状态
 - **删除**：清理不需要的备份记录
 - **跨平台**：Windows 备份含注册表，macOS/Linux 备份软重置相关文件
 
 ### 代理服务器
 
-启动代理后，可直接对接支持 Claude/OpenAI API 的第三方工具：
+启动代理后，可直接对接支持 Claude/OpenAI API 的第三方工具。
 
 ```bash
 # Claude API 格式
@@ -185,7 +199,13 @@ curl http://localhost:8080/v1/chat/completions \
 <details>
 <summary><b>切换账号后 Kiro 启动失败？</b></summary>
 <br/>
-确认 Kiro 已正确安装，Windows 用户建议以管理员身份运行以获得完整的机器码重置能力。
+确认 Kiro 已正确安装，Windows 用户建议以管理员身份运行以获得完整的机器码重置能力。也可在设置中手动指定 Kiro 安装路径。
+</details>
+
+<details>
+<summary><b>中文用户名路径报错？</b></summary>
+<br/>
+v2.3.1 已修复中文 Windows 用户名导致路径乱码的问题。请更新到最新版本。
 </details>
 
 ---
@@ -201,7 +221,7 @@ curl http://localhost:8080/v1/chat/completions \
 ## 💬 交流反馈
 
 - 🌐 **官网**：[kiroswitch.top](https://kiroswitch.top/)
-- 💬 **QQ 交流群**：[1065224964](https://qun.qq.com/universal-share/share?ac=1&authKey=BomWk%2FawrYRpcRpyd0sPsAMx2UPhtHkb2ZobUBo6Yp9ozXKEPYtr3UMemrnePc3h&busi_data=eyJncm91cENvZGUiOiIxMDY1MjI0OTY0IiwidG9rZW4iOiJqME9xSk5wL1p2VzlRczg2MkR2K2JXVTlUdjZVTTB1UmxsQ3YyV3doT3RoNE1ua2xoSXJpWTQrUFBzSGc4TDRrIiwidWluIjoiMTg4NDQzNTQ4In0%3D&data=iG0O34ARO65vmvL_QL4gE7dYh72gUWhYsj5IbgmYX2b7owfmbGtjjVYHblk19DdULt617EydUiGtYF8OeztVew&svctype=4&tempid=h5_group_info)
+- � **QQ 交流群**：[1065224964](https://qun.qq.com/universal-share/share?ac=1&authKey=BomWk%2FawrYRpcRpyd0sPsAMx2UPhtHkb2ZobUBo6Yp9ozXKEPYtr3UMemrnePc3h&busi_data=eyJncm91cENvZGUiOiIxMDY1MjI0OTY0IiwidG9rZW4iOiJqME9xSk5wL1p2VzlRczg2MkR2K2JXVTlUdjZVTTB1UmxsQ3YyV3doT3RoNE1ua2xoSXJpWTQrUFBzSGc4TDRrIiwidWluIjoiMTg4NDQzNTQ4In0%3D&data=iG0O34ARO65vmvL_QL4gE7dYh72gUWhYsj5IbgmYX2b7owfmbGtjjVYHblk19DdULt617EydUiGtYF8OeztVew&svctype=4&tempid=h5_group_info)
 - 🐛 **问题反馈**：[GitHub Issues](https://github.com/zeoak9297/KiroSwitchManager/issues)
 
 ---
