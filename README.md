@@ -13,8 +13,6 @@
 
 **一站式管理你的 Kiro IDE 账号，内置 Claude/OpenAI 兼容代理服务器**
 
-🌐 [官网](https://kiroswitch.top/) · 📦 [下载](https://github.com/zeoak9297/KiroSwitchManager/releases/latest) · <img src="https://img.icons8.com/color/20/qq.png" width="20" height="20"/> [QQ 交流群：1065224964](https://qun.qq.com/universal-share/share?ac=1&authKey=BomWk%2FawrYRpcRpyd0sPsAMx2UPhtHkb2ZobUBo6Yp9ozXKEPYtr3UMemrnePc3h&busi_data=eyJncm91cENvZGUiOiIxMDY1MjI0OTY0IiwidG9rZW4iOiJqME9xSk5wL1p2VzlRczg2MkR2K2JXVTlUdjZVTTB1UmxsQ3YyV3doT3RoNE1ua2xoSXJpWTQrUFBzSGc4TDRrIiwidWluIjoiMTg4NDQzNTQ4In0%3D&data=iG0O34ARO65vmvL_QL4gE7dYh72gUWhYsj5IbgmYX2b7owfmbGtjjVYHblk19DdULt617EydUiGtYF8OeztVew&svctype=4&tempid=h5_group_info)
-
 </div>
 
 ---
@@ -176,53 +174,11 @@ curl http://localhost:8080/v1/chat/completions \
 
 ---
 
-## ❓ 常见问题
-
-<details>
-<summary><b>macOS 提示"无法验证开发者"怎么办？</b></summary>
-<br/>
-前往 系统设置 → 隐私与安全性 → 找到 KiroSwitch Manager → 点击"仍要打开"
-</details>
-
-<details>
-<summary><b>代理服务器连接不上？</b></summary>
-<br/>
-检查防火墙是否放行了代理端口（默认 8080），确认 API Key 是否正确填写。
-</details>
-
-<details>
-<summary><b>账号显示"已封禁"？</b></summary>
-<br/>
-该账号的凭证已失效或被限制，可尝试删除后重新导入，或使用机器码重置功能。
-</details>
-
-<details>
-<summary><b>切换账号后 Kiro 启动失败？</b></summary>
-<br/>
-确认 Kiro 已正确安装，Windows 用户建议以管理员身份运行以获得完整的机器码重置能力。也可在设置中手动指定 Kiro 安装路径。
-</details>
-
-<details>
-<summary><b>中文用户名路径报错？</b></summary>
-<br/>
-v2.3.1 已修复中文 Windows 用户名导致路径乱码的问题。请更新到最新版本。
-</details>
-
----
-
 ## 📝 源码说明
 
 本仓库仅发布编译好的安装包，不提供源码。前往 [Releases](https://github.com/zeoak9297/KiroSwitchManager/releases/latest) 下载。
 
 **⚠️ 本项目永久免费！如果有人向你收费，你被骗了！**
-
----
-
-## <img src="https://img.icons8.com/color/24/qq.png" width="24" height="24"/> 交流反馈
-
-- 🌐 **官网**：[kiroswitch.top](https://kiroswitch.top/)
-- <img src="https://img.icons8.com/color/20/qq.png" width="20" height="20"/> **QQ 交流群**：[1065224964](https://qun.qq.com/universal-share/share?ac=1&authKey=BomWk%2FawrYRpcRpyd0sPsAMx2UPhtHkb2ZobUBo6Yp9ozXKEPYtr3UMemrnePc3h&busi_data=eyJncm91cENvZGUiOiIxMDY1MjI0OTY0IiwidG9rZW4iOiJqME9xSk5wL1p2VzlRczg2MkR2K2JXVTlUdjZVTTB1UmxsQ3YyV3doT3RoNE1ua2xoSXJpWTQrUFBzSGc4TDRrIiwidWluIjoiMTg4NDQzNTQ4In0%3D&data=iG0O34ARO65vmvL_QL4gE7dYh72gUWhYsj5IbgmYX2b7owfmbGtjjVYHblk19DdULt617EydUiGtYF8OeztVew&svctype=4&tempid=h5_group_info)
-- 🐛 **问题反馈**：[GitHub Issues](https://github.com/zeoak9297/KiroSwitchManager/issues)
 
 ---
 
