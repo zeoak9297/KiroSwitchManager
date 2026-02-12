@@ -13,7 +13,7 @@
 
 **一站式管理你的 Kiro IDE 账号，内置 Claude/OpenAI 兼容代理服务器**
 
-🌐 [官网](https://kiroswitch.top/) · 📦 [下载](https://github.com/zeoak9297/KiroSwitchManager/releases/latest) · � [QQ 交流群：1065224964](https://qun.qq.com/universal-share/share?ac=1&authKey=BomWk%2FawrYRpcRpyd0sPsAMx2UPhtHkb2ZobUBo6Yp9ozXKEPYtr3UMemrnePc3h&busi_data=eyJncm91cENvZGUiOiIxMDY1MjI0OTY0IiwidG9rZW4iOiJqME9xSk5wL1p2VzlRczg2MkR2K2JXVTlUdjZVTTB1UmxsQ3YyV3doT3RoNE1ua2xoSXJpWTQrUFBzSGc4TDRrIiwidWluIjoiMTg4NDQzNTQ4In0%3D&data=iG0O34ARO65vmvL_QL4gE7dYh72gUWhYsj5IbgmYX2b7owfmbGtjjVYHblk19DdULt617EydUiGtYF8OeztVew&svctype=4&tempid=h5_group_info)
+🌐 [官网](https://kiroswitch.top/) · 📦 [下载](https://github.com/zeoak9297/KiroSwitchManager/releases/latest) · <img src="https://img.icons8.com/color/20/qq.png" width="20" height="20"/> [QQ 交流群：1065224964](https://qun.qq.com/universal-share/share?ac=1&authKey=BomWk%2FawrYRpcRpyd0sPsAMx2UPhtHkb2ZobUBo6Yp9ozXKEPYtr3UMemrnePc3h&busi_data=eyJncm91cENvZGUiOiIxMDY1MjI0OTY0IiwidG9rZW4iOiJqME9xSk5wL1p2VzlRczg2MkR2K2JXVTlUdjZVTTB1UmxsQ3YyV3doT3RoNE1ua2xoSXJpWTQrUFBzSGc4TDRrIiwidWluIjoiMTg4NDQzNTQ4In0%3D&data=iG0O34ARO65vmvL_QL4gE7dYh72gUWhYsj5IbgmYX2b7owfmbGtjjVYHblk19DdULt617EydUiGtYF8OeztVew&svctype=4&tempid=h5_group_info)
 
 </div>
 
@@ -111,7 +111,7 @@
 
 ---
 
-## � 使用指南览
+## 📖 使用指南
 
 ### 机器码绑定（一账号一机器码）
 
@@ -218,10 +218,10 @@ v2.3.1 已修复中文 Windows 用户名导致路径乱码的问题。请更新�
 
 ---
 
-## � 交流反馈
+## <img src="https://img.icons8.com/color/24/qq.png" width="24" height="24"/> 交流反馈
 
 - 🌐 **官网**：[kiroswitch.top](https://kiroswitch.top/)
-- � **QQ 交流群**：[1065224964](https://qun.qq.com/universal-share/share?ac=1&authKey=BomWk%2FawrYRpcRpyd0sPsAMx2UPhtHkb2ZobUBo6Yp9ozXKEPYtr3UMemrnePc3h&busi_data=eyJncm91cENvZGUiOiIxMDY1MjI0OTY0IiwidG9rZW4iOiJqME9xSk5wL1p2VzlRczg2MkR2K2JXVTlUdjZVTTB1UmxsQ3YyV3doT3RoNE1ua2xoSXJpWTQrUFBzSGc4TDRrIiwidWluIjoiMTg4NDQzNTQ4In0%3D&data=iG0O34ARO65vmvL_QL4gE7dYh72gUWhYsj5IbgmYX2b7owfmbGtjjVYHblk19DdULt617EydUiGtYF8OeztVew&svctype=4&tempid=h5_group_info)
+- <img src="https://img.icons8.com/color/20/qq.png" width="20" height="20"/> **QQ 交流群**：[1065224964](https://qun.qq.com/universal-share/share?ac=1&authKey=BomWk%2FawrYRpcRpyd0sPsAMx2UPhtHkb2ZobUBo6Yp9ozXKEPYtr3UMemrnePc3h&busi_data=eyJncm91cENvZGUiOiIxMDY1MjI0OTY0IiwidG9rZW4iOiJqME9xSk5wL1p2VzlRczg2MkR2K2JXVTlUdjZVTTB1UmxsQ3YyV3doT3RoNE1ua2xoSXJpWTQrUFBzSGc4TDRrIiwidWluIjoiMTg4NDQzNTQ4In0%3D&data=iG0O34ARO65vmvL_QL4gE7dYh72gUWhYsj5IbgmYX2b7owfmbGtjjVYHblk19DdULt617EydUiGtYF8OeztVew&svctype=4&tempid=h5_group_info)
 - 🐛 **问题反馈**：[GitHub Issues](https://github.com/zeoak9297/KiroSwitchManager/issues)
 
 ---
