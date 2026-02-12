@@ -68,7 +68,7 @@
 
 </td>
 </tr>
-</te>
+</table>
 
 ---
 
@@ -99,7 +99,7 @@
 
 ---
 
-## �️ 界面预览
+## 🖼️ 界面预览
 
 | 首页 | 账号管理 |
 |:---:|:---:|
@@ -221,7 +221,7 @@ v2.3.1 已修复中文 Windows 用户名导致路径乱码的问题。请更新�
 ## 💬 交流反馈
 
 - 🌐 **官网**：[kiroswitch.top](https://kiroswitch.top/)
-- � **QQ 交流群**：[1065224964](https://qun.qq.com/universal-share/share?ac=1&authKey=BomWk%2FawrYRpcRpyd0sPsAMx2UPhtHkb2ZobUBo6Yp9ozXKEPYtr3UMemrnePc3h&busi_data=eyJncm91cENvZGUiOiIxMDY1MjI0OTY0IiwidG9rZW4iOiJqME9xSk5wL1p2VzlRczg2MkR2K2JXVTlUdjZVTTB1UmxsQ3YyV3doT3RoNE1ua2xoSXJpWTQrUFBzSGc4TDRrIiwidWluIjoiMTg4NDQzNTQ4In0%3D&data=iG0O34ARO65vmvL_QL4gE7dYh72gUWhYsj5IbgmYX2b7owfmbGtjjVYHblk19DdULt617EydUiGtYF8OeztVew&svctype=4&tempid=h5_group_info)
+- 💬 **QQ 交流群**：[1065224964](https://qun.qq.com/universal-share/share?ac=1&authKey=BomWk%2FawrYRpcRpyd0sPsAMx2UPhtHkb2ZobUBo6Yp9ozXKEPYtr3UMemrnePc3h&busi_data=eyJncm91cENvZGUiOiIxMDY1MjI0OTY0IiwidG9rZW4iOiJqME9xSk5wL1p2VzlRczg2MkR2K2JXVTlUdjZVTTB1UmxsQ3YyV3doT3RoNE1ua2xoSXJpWTQrUFBzSGc4TDRrIiwidWluIjoiMTg4NDQzNTQ4In0%3D&data=iG0O34ARO65vmvL_QL4gE7dYh72gUWhYsj5IbgmYX2b7owfmbGtjjVYHblk19DdULt617EydUiGtYF8OeztVew&svctype=4&tempid=h5_group_info)
 - 🐛 **问题反馈**：[GitHub Issues](https://github.com/zeoak9297/KiroSwitchManager/issues)
 
 ---
