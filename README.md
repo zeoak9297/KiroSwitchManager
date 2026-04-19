@@ -11,7 +11,7 @@
 
 <br/>
 
-**一站式管理你的 Kiro IDE 账号，内置 Claude/OpenAI 兼容代理服务器**
+**一站式管理你的 Kiro IDE 账号，内置反代服务器 & 自动换号 & WebSearch 搜索增强**
 
 </div>
 
@@ -19,13 +19,21 @@
 
 ## 🖼️ 界面预览
 
-| 首页 | 账号管理 |
+| 首页 | 首页 |
 |:---:|:---:|
-| ![首页](src/home.jpg) | ![账号管理](src/account.jpg) |
+| ![首页](src/home.jpg) | ![首页](src/home1.jpg) |
+
+| 账号管理 | 账号管理 |
+|:---:|:---:|
+| ![账号管理](src/account.jpg) | ![账号管理](src/account2.jpg) |
 
 | 代理服务器 | 设置 |
 |:---:|:---:|
 | ![代理服务器](src/proxy.jpg) | ![设置](src/seting.jpg) |
+
+| Kiro IDE 设置 |
+|:---:|
+| ![Kiro IDE 设置](src/kiroide.jpg) |
 
 ---
 
@@ -45,12 +53,14 @@
 </td>
 <td width="50%">
 
-### 🌐 API 代理服务器
+### 🌐 反代服务器（全面升级）
+- 支持 **CLI / IDE 双模式**切换（默认 CLI 模式）
 - 兼容 **Claude API** 和 **OpenAI API** 格式
-- 多账号负载均衡，自动轮询
-- Token 桶限流（全局 + 单账号）
-- 熔断器模式，自动隔离故障账号
-- 支持流式 & 非流式响应
+- **WebSearch 搜索注入**：纯搜索 & 混合搜索，结果自动注入消息
+- **Thinking/Reasoning** 支持
+- 动态模型列表、多端点自动切换
+- 消息截断保护、流式心跳保活
+- 默认端口 **9090**，启动前自动保存配置
 
 </td>
 </tr>
@@ -68,13 +78,16 @@
 <td width="50%">
 
 ### 🎨 更多特性
-- **模型锁定**：锁定 Sonnet / Opus / Haiku 模型
-- **Kiro 路径自动检测**：支持手动指定或自动检测安装路径
-- **6 套主题**：深色、浅色、海洋蓝、梦幻紫、清新绿、玫瑰粉
-- **自动更新检查**
-- **开机自启动**
-- **账号数据导出**
-- **无边框窗口**，支持拖拽
+- **🔄 自动换号**：配额用完自动切换，支持轮询/最多配额/随机策略
+- **⏰ Token 自动刷新**：后台定时刷新即将过期的 Token
+- **📦 Kiro CLI 集成**：从 kiro-cli 导入账号、CLI 切号与回滚
+- **🖥️ IDE 设置同步**：独立面板读写 20+ 项 Kiro IDE 设置
+- **📊 配额进度条**：绿/黄/红三色直观展示用量
+- **🏷️ 订阅类型标识**：自动解析 Free/Pro/Pro+ 并显示徽章
+- **☑️ 批量操作**：批量选择、删除、导出账号
+- **📋 列表/卡片双视图**：视图偏好自动保存
+- **3 套主题**：深色、浅色、海洋蓝（默认）
+- **模型锁定** / **自动更新** / **开机自启动** / **无边框窗口**
 
 </td>
 </tr>
@@ -131,13 +144,13 @@
 - **删除**：清理不需要的备份记录
 - **跨平台**：Windows 备份含注册表，macOS/Linux 备份软重置相关文件
 
-### 代理服务器
+### 反代服务器
 
-启动代理后，可直接对接支持 Claude/OpenAI API 的第三方工具。
+启动反代后（默认端口 9090，支持 CLI/IDE 双模式），可直接对接支持 Claude/OpenAI API 的第三方工具。
 
 ```bash
 # Claude API 格式
-curl http://localhost:8080/v1/messages \
+curl http://localhost:9090/v1/messages \
   -H "x-api-key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -149,7 +162,7 @@ curl http://localhost:8080/v1/messages \
 
 ```bash
 # OpenAI API 格式
-curl http://localhost:8080/v1/chat/completions \
+curl http://localhost:9090/v1/chat/completions \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -158,7 +171,7 @@ curl http://localhost:8080/v1/chat/completions \
   }'
 ```
 
-> API Key 在代理设置面板中查看，首次启动时自动生成。
+> API Key 在反代设置面板中查看，首次启动时自动生成。
 
 ### 模型锁定
 
