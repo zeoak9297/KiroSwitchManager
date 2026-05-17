@@ -27,13 +27,17 @@
 |:---:|:---:|
 | ![账号管理](src/account.jpg) | ![账号管理](src/account2.jpg) |
 
-| 代理服务器 | 设置 |
+| 账号管理 | 代理服务器 |
 |:---:|:---:|
-| ![代理服务器](src/proxy.jpg) | ![设置](src/seting.jpg) |
+| ![账号管理](src/account3.jpg) | ![代理服务器](src/proxy.jpg) |
 
-| Kiro IDE 设置 |
-|:---:|
-| ![Kiro IDE 设置](src/kiroide.jpg) |
+| 设置 | Kiro IDE 设置 |
+|:---:|:---:|
+| ![设置](src/seting.jpg) | ![Kiro IDE 设置](src/kiroide.jpg) |
+
+| 关于 | 功能展示 |
+|:---:|:---:|
+| ![关于](src/about.jpg) | ![功能展示](src/QQ20260517-125332.jpg) |
 
 ---
 
